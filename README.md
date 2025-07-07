@@ -37,39 +37,7 @@ The models are implemented entirely with core Python tools and visualized using 
 
 ## 🧠 Architecture Diagram
 
-```mermaid
-flowchart TD
-    A[📥 Raw Data: 14 Lots × 73 Days] --> B[🧹 Data Preprocessing]
-    B --> C1[📈 Model 1: Linear Pricing]
-    B --> C2[📊 Model 2: Demand-Based Pricing]
-    B --> C3[⚖️ Model 3: Competitive Pricing]
-    C1 --> D[🧾 Price Timeline]
-    C2 --> D
-    C3 --> D
-    D --> E[📉 Visualization with Matplotlib]
-
-    subgraph Features Extracted
-        B1[Occupancy Ratio]
-        B2[Queue Length]
-        B3[Traffic Level]
-        B4[Special Day Indicator]
-        B5[Vehicle Type Weight]
-        B6[Competitor Prices (Simulated)]
-    end
-
-    A --> B1
-    A --> B2
-    A --> B3
-    A --> B4
-    A --> B5
-    A --> B6
-    B1 --> B
-    B2 --> B
-    B3 --> B
-    B4 --> B
-    B5 --> B
-    B6 --> C3 
-```
+<pre> ```mermaid flowchart TD A[📥 Raw Data: 14 Lots × 73 Days] --> B[🧹 Data Preprocessing] B --> C1[📈 Model 1: Linear Pricing] B --> C2[📊 Model 2: Demand-Based Pricing] B --> C3[⚖️ Model 3: Competitive Pricing] C1 --> D[🧾 Price Timeline] C2 --> D C3 --> D D --> E[📉 Visualization with Matplotlib] subgraph Features_Extracted B1[Occupancy Ratio] B2[Queue Length] B3[Traffic Level] B4[Special Day Indicator] B5[Vehicle Type Weight] B6[Competitor Prices Simulated] end A --> B1 A --> B2 A --> B3 A --> B4 A --> B5 A --> B6 B1 --> B B2 --> B B3 --> B B4 --> B B5 --> B B6 --> C3 ``` </pre>
 
 
 ⚙️ Project Architecture & Workflow
